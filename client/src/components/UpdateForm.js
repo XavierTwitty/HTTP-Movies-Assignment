@@ -46,7 +46,7 @@ const UpdateForm = (props) => {
         console.log(res);
         props.setMovieList(
           props.movieList.map((movie) => {
-            if (movie.id == res.data.id) {
+            if (movie.id === res.data.id) {
               return res.data;
             } else {
               return movie;
@@ -81,7 +81,7 @@ const UpdateForm = (props) => {
           type="number"
           name="metascore"
           onChange={changeHandler}
-          placeholder="director"
+          placeholder="metascore"
           value={item.metascore}
         />
         <input
